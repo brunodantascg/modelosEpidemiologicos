@@ -1,2 +1,2 @@
 # modelosEpidemiologicos
-Modelos Epidemiológicos desenvolvido na linguagem Python 
+Modelos Epidemiológicos desenvolvidos na linguagem Python 
