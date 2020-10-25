@@ -16,7 +16,7 @@ R0 = 0
 # S0 = Suscetíveis à infecção inicialmente
 S0 = N - I0 - R0
 
-# Taxa de contato (beta)
+# Taxa de contato/infecção (beta)
 beta = 0.2
 
 # Taxa média de recuperação (gama)
