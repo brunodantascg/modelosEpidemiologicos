@@ -34,9 +34,9 @@ tempo = np.linspace(0, 365, 365)
 # Equações diferenciais do modelo
 def equacoeSIRc(y, tempo, N, beta, gama, mi, ni):
     S, I, R = y
-    dS = ni * N - beta * S * I / N - mi * S
-    dI = beta * S * I / N - gama * I - mi * I
-    dR = gama * I - mi * R
+    dSdt = ni * N - beta * S * I / N - mi * S
+    dIdt = beta * S * I / N - gama * I - mi * I
+    dRdt = gama * I - mi * R
     return dS, dI, dR
 
 # Vetor de condições iniciais

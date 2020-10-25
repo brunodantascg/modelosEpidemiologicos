@@ -29,9 +29,9 @@ tempo = np.linspace(0, 365, 365)
 # Equações diferenciais do modelo
 def equacoesSIR(y, tempo, N, beta, gama):
     S, I, R = y
-    dS = -beta * S * I / N
-    dI = beta * S * I / N - gama * I
-    dR = gama * I
+    dSdt = -beta * S * I / N
+    dIdt = beta * S * I / N - gama * I
+    dRdt = gama * I
     return dS, dI, dR
 
 # Vetor de condições iniciais
