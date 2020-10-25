@@ -31,6 +31,7 @@ ni = 0.1
 # Tempos em dias
 tempo = np.linspace(0, 365, 365)
 
+# Equações diferenciais do modelo
 def equacoeSIRc(y, tempo, N, beta, gama, mi, ni):
     S, I, R = y
     dS = ni * N - beta * S * I / N - mi * S

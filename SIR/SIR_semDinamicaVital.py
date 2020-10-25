@@ -26,7 +26,7 @@ gama = 1/10
 # Tempos em dias
 tempo = np.linspace(0, 365, 365)
 
-# Equações diferenciais do modelo SIR
+# Equações diferenciais do modelo
 def equacoesSIR(y, tempo, N, beta, gama):
     S, I, R = y
     dS = -beta * S * I / N
