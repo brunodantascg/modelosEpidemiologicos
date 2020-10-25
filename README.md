@@ -26,9 +26,9 @@ SIR = S, I e R representam o número de indivíduos suscetíveis, infectados e r
   SIR - em uma população com dinâmica vital: os novos nascimentos podem proporcionar indivíduos mais suscetíveis à população, sustentando uma epidemia ou permitindo que novas introduções se espalhem pela população. Em uma população realista como essa, a dinâmica da doença atingirá um estado estacionário.
   Onde,
   
-  mi = natalidade
+  ni = natalidade
   
-  ni = mortalidade
+  mi = mortalidade
   
   Logo,
   
