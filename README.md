@@ -33,8 +33,12 @@ SIR = S, I e R representam o número de indivíduos suscetíveis, infectados e r
   Logo,
   
   dS = mi * N - beta * S * I - ni * S
+  
   dI = beta * S * I - gama * I - ni * I
+  
   dR = gama * I - ni * R
+
+  Onde N=S+I+R é a população total.
 
 # SIRS (Susceptível - Infeccioso - Recuperado - Susceptível)
 
