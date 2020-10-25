@@ -6,23 +6,23 @@ I = Infeccioso
 R = Recuperado
 S = Susceptível
 
-SIR (Susceptível - Infeccioso - Recuperado)
+# SIR (Susceptível - Infeccioso - Recuperado)
 
   SIR sem dinâmica vital
   
   SIR com dinâmica vital
 
-SIRS (Susceptível - Infeccioso - Recuperado - Susceptível)
+# SIRS (Susceptível - Infeccioso - Recuperado - Susceptível)
 
 
   SIRS sem dinâmica vital
   
   SIRS com dinâmica vital
 
-SEIR ()
+# SEIR ()
 
-SEIRS ()
+# SEIRS ()
 
-SI ()
+# SI ()
 
-SIS ()
+# SIS ()
