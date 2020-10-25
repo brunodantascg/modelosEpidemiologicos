@@ -1,4 +1,4 @@
-# Modelos Epidemiológicos desenvolvidos na linguagem Python 
+# Modelos Epidemiológicos (Python) 
 
 S = Susceptível
 I = Infeccioso
