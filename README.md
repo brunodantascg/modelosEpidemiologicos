@@ -1,8 +1,11 @@
 # Modelos Epidemiológicos (Python) 
 
 S = Susceptível
+
 I = Infeccioso
+
 R = Recuperado
+
 S = Susceptível
 
 # SIR (Susceptível - Infeccioso - Recuperado)
