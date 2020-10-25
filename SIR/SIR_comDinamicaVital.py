@@ -37,7 +37,7 @@ def equacoeSIRc(y, tempo, N, beta, gama, mi, ni):
     dSdt = ni * N - beta * S * I / N - mi * S
     dIdt = beta * S * I / N - gama * I - mi * I
     dRdt = gama * I - mi * R
-    return dS, dI, dR
+    return dSdt, dIdt, dRdt
 
 # Vetor de condições iniciais
 y0 = S0, I0, R0

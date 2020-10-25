@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # N = população total
-N = 1000
+N = 10000
 
 # Número Inicial de Indivíduos Infectados
 I0 = 1
@@ -32,7 +32,7 @@ def equacoesSIR(y, tempo, N, beta, gama):
     dSdt = -beta * S * I / N
     dIdt = beta * S * I / N - gama * I
     dRdt = gama * I
-    return dS, dI, dR
+    return dSdt, dIdt, dRdt
 
 # Vetor de condições iniciais
 y0 = S0, I0, R0
@@ -49,7 +49,7 @@ ax.plot(tempo, I/1000, 'r', alpha=0.9, lw=2, label='Infectados')
 ax.plot(tempo, R/1000, 'g', alpha=0.9, lw=2, label='Recuperados')
 ax.set_xlabel('Tempo (dias)')
 ax.set_ylabel('Número de')
-ax.set_ylim(0,1.2)
+ax.set_ylim(0,10.2)
 ax.yaxis.set_tick_params(length=0)
 ax.xaxis.set_tick_params(length=0)
 ax.grid(b=True, which='major', c='w', lw=2, ls='-')
