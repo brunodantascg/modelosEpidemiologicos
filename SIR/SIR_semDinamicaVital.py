@@ -20,8 +20,9 @@ S0 = N - I0 - R0
 # Taxa de contato/infecção (beta)
 beta = 0.2
 
-# Taxa média de recuperação (gama)
-gama = 1/10
+# Taxa média de recuperação (gama) = 1/dias
+dias = 10
+gama = 1/dias
 
 # Tempos em dias
 tempo = np.linspace(0, 365, 365)
