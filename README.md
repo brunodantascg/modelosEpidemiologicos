@@ -50,6 +50,6 @@ O modelo SIRS é usado para permitir que os indivíduos recuperados retornem ao 
 
 # SEIRS ()
 
-# SI ()
+# SI (Susceptível - Infeccioso)
 
-# SIS ()
+# SIS (Susceptível - Infeccioso - Susceptível)
