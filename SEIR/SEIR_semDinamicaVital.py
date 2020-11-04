@@ -55,7 +55,7 @@ ax = fig.add_subplot(111, facecolor='#C1FFEC', axisbelow=True) # Tamanho e Cor d
 ax.plot(tempo, S/1000, 'b', alpha=0.9, lw=2, label='Suscetíveis')
 ax.plot(tempo, I/1000, 'r', alpha=0.9, lw=2, label='Infectados')
 ax.plot(tempo, R/1000, 'g', alpha=0.9, lw=2, label='Recuperados')
-ax.plot(tempo, R/1000, 'y', alpha=0.9, lw=2, label='Exposto')
+ax.plot(tempo, E/1000, 'y', alpha=0.9, lw=2, label='Exposto')
 ax.set_xlabel('Tempo (dias)')
 ax.set_ylabel('Número de')
 ax.set_ylim(0,10.2)

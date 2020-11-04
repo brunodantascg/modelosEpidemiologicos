@@ -40,7 +40,7 @@ ni = 0.1
 tempo = np.linspace(0, 365, 365)
 
 # Equações diferenciais do modelo
-def equacoesSEIRs(y, tempo, N, E, sigma, beta, gama):
+def equacoesSEIRc(y, tempo, N, E, sigma, beta, gama):
     S, E, I, R = y
     dSdt = ni * N - mi * S - beta * S * I / N
     dEdt = beta * S * I / N - mi * E - sigma * E
@@ -52,7 +52,7 @@ def equacoesSEIRs(y, tempo, N, E, sigma, beta, gama):
 y0 = S0, E0, I0, R0
 
 # Integração das equações SIR no tempo
-i = odeint(equacoesSEIRs, y0, tempo, args=(N, E, sigma, beta, gama))
+i = odeint(equacoesSEIRc, y0, tempo, args=(N, E, sigma, beta, gama))
 S, E, I, R = i.T
 
 # Visualização dos dados em três curvas variavel x tempofig
@@ -61,7 +61,7 @@ ax = fig.add_subplot(111, facecolor='#C1FFEC', axisbelow=True) # Tamanho e Cor d
 ax.plot(tempo, S/1000, 'b', alpha=0.9, lw=2, label='Suscetíveis')
 ax.plot(tempo, I/1000, 'r', alpha=0.9, lw=2, label='Infectados')
 ax.plot(tempo, R/1000, 'g', alpha=0.9, lw=2, label='Recuperados')
-ax.plot(tempo, R/1000, 'y', alpha=0.9, lw=2, label='Exposto')
+ax.plot(tempo, E/1000, 'y', alpha=0.9, lw=2, label='Exposto')
 ax.set_xlabel('Tempo (dias)')
 ax.set_ylabel('Número de')
 ax.set_ylim(0,10.2)

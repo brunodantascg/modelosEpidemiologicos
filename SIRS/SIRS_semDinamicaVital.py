@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # N = população total
-N = 10000
+N = 10000000
 
 # Número Inicial de Indivíduos Infectados
 I0 = 1
@@ -18,20 +18,20 @@ R0 = 0
 S0 = N - I0 - R0
 
 # Taxa de contato/infecção (beta)
-beta = 0.2
+beta = 0.4
 
 # taxa que indivíduos recuperados que retornam ao estado de suscetível
-Csi = 0.3
+Csi = 0.7
 
 # Taxa média de recuperação (gama) = 1/dias
 dias = 10
 gama = 1/dias
 
 # Tempos em dias
-tempo = np.linspace(0, 365, 365)
+tempo = np.linspace(0, 150, 150)
 
-# Equações diferenciais do modelo
-def equacoesSIRS(y, tempo, N, beta, gama, Csi):
+# Equações diferenciais do modelo SIRS sem dinâmica vital
+def equacoesSIRSs(y, tempo, N, beta, gama, Csi):
     S, I, R = y
     dSdt = -beta * S * I + Csi * R
     dIdt = beta * S * I / N - gama * I
@@ -42,7 +42,7 @@ def equacoesSIRS(y, tempo, N, beta, gama, Csi):
 y0 = S0, I0, R0
 
 # Integração das equações SIR no tempo
-i = odeint(equacoesSIRS, y0, tempo, args=(N, beta, gama, Csi))
+i = odeint(equacoesSIRs, y0, tempo, args=(N, beta, gama, Csi))
 S, I, R = i.T
 
 # Visualização dos dados em três curvas variavel x tempofig
@@ -51,7 +51,7 @@ ax = fig.add_subplot(111, facecolor='#C1FFEC', axisbelow=True) # Tamanho e Cor d
 ax.plot(tempo, S/1000, 'b', alpha=0.9, lw=2, label='Suscetíveis')
 ax.plot(tempo, I/1000, 'r', alpha=0.9, lw=2, label='Infectados')
 ax.plot(tempo, R/1000, 'g', alpha=0.9, lw=2, label='Recuperados')
-#ax.plot(tempo, Csi/1000, 'y', alpha=0.9, lw=2, label='Recuperados')
+ax.plot(tempo, S/1000, 'y', alpha=0.9, lw=2, label='População em declínio')
 ax.set_xlabel('Tempo (dias)')
 ax.set_ylabel('Número de')
 ax.set_ylim(0,10.2)
