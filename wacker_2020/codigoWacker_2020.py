@@ -17,7 +17,7 @@ acumuladoRecuperados = [10, 20, 40]
 somaAcumuladoRecuperados = 0
 
 # Acumulado de pessoas mortas, em M pontos no tempo
-acumuladoMortos = [300, 250, 600]
+acumuladoMortos = [300, 450, 600]
 somaAcumuladoMortos = 0
 
 # Soma Infectados
@@ -48,7 +48,7 @@ M = somaMortos(acumuladoMortos, somaAcumuladoMortos)
 # (2)  - Step 1 (Processar os dados de entrada de acordo com (7))
 
 Rj = R + M
-Ij = I + M
+Ij = I - R
 Sj = N - Ij - Rj
 
 # (3) - Step 2 (Resolva o problema de identificação de parâmetro inverso discreto no tempo)
