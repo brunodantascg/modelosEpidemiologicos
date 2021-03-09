@@ -45,7 +45,7 @@ I = somaInfectados(acumuladoInfectados, somaAcumuladoInfectados)
 R = somaRecuperados(acumuladoRecuperados, somaAcumuladoRecuperados)
 M = somaMortos(acumuladoMortos, somaAcumuladoMortos)
 
-# (2)  - Step 1 (Processar os dados de entrada de acordo com (7))
+# (2) - Step 1 (Processar os dados de entrada de acordo com (7))
 
 Rj = R + M
 Ij = I - R
